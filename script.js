@@ -146,11 +146,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+const celularContainer = document.getElementById('phone-container');
 const mediaQuery = window.matchMedia("(max-width: 576px)");
 function handleScreenChange(e) {
 
     if (e.matches) {
+
+        celularContainer.style.backgroundImage = 'url(assets/segv-interno.png)'
+
         let count = 1;
         document.getElementById('radio1').checked = true;
 
@@ -168,6 +171,9 @@ function handleScreenChange(e) {
 
         }
     } else {
+        
+        celularContainer.style.background = 'none';
+
         let count = 1;
         document.getElementById('radio1').checked = true;
 
@@ -214,13 +220,6 @@ window.addEventListener("resize", toggleMenu);
 const simboloMenuMobile = document.getElementById('simbolo-menu-mobile');
 const simboloFecharMenu = document.getElementById('fechar-menu-mobile');
 const itensMenu = document.querySelectorAll('.item-mobile a');
-const conteudoPrincipal = document.querySelectorAll('.conteudo-principal')
-
-function toggleVisibilidadeConteudo(ocultar) {
-    conteudoPrincipal.forEach(elemento => {
-        elemento.classList.toggle('ocultar', ocultar);
-    });
-}
 
 function abrirMenu() {
     menuMobile.style.display = 'block';
@@ -255,6 +254,7 @@ playButton.addEventListener('click', () => {
     video.play(); 
     playButton.style.display = 'none'; 
     pauseButton.style.display = 'block'; 
+    celularContainer.style.background = 'none';
 });
 
 pauseButton.addEventListener('click', () => {
@@ -263,3 +263,14 @@ pauseButton.addEventListener('click', () => {
     playButton.style.display = 'block';
 });
 
+function redirecionamento(){
+    menuMobile.style.display = 'none';
+    simboloMenuMobile.style.display = 'block';
+    simboloFecharMenu.style.display = 'none';
+}
+
+const videoInicial = document.querySelector('video');
+
+videoInicial.play().catch(error => {
+    console.error('Reprodução automática bloqueada:', error);
+});
