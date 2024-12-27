@@ -1,8 +1,8 @@
 :root {
     --font-h1: 2.7rem;
-    --h1-bold: 720;
+    --h1-bold: 600;
     --font-p: 1.2rem;
-    --p-bold: 500;
+    --p-bold: 400;
     --padding-section: 15vh 20vh;
     --color-one: #061733;
     --color-two: rgb(7, 177, 152);
@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", serif;
 }
 
 html {
@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn-ctt-mobile {
-    width: 15vh;
+    width: 13.5vh;
     padding: 10px 0;
     text-align: center;
 }
@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     font-size: 3.2rem;
     width: 67rem;
-    font-weight: 900;
+    font-weight: var(--h1-bold);
     color: #fff;
 }
 
@@ -197,7 +197,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
     cursor: pointer;
     border: 2px solid #fff;
-    font-weight: bold;
+    font-weight: var(--p-bold);
     z-index: 1;
     transition: 0.5s;
 }
@@ -214,36 +214,23 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid #3b82f6;
 }
 
-.top-cont-1 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-}
-
-.top-cont-1 h1 {
-    background: linear-gradient(to right, rgb(47, 92, 163), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: start;
-    margin-left: 20%;
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    width: 60rem;
-}
-
-.top-cont-1 h2 {
-    font-size: 19px;
-    text-align: start;
-    margin-left: 20%;
-    color: rgb(136, 141, 155);
-    font-weight: bold;
-    width: 90rem;
-    margin-bottom: 4rem;
-}
-
 .conteudo-ad-container-1 {
     display: flex;
+}
+
+.video-fallback {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-background video:not([autoplay]) + .video-fallback {
+    display: block;
 }
 
 .parallax {
@@ -295,11 +282,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .content h1 {
+    font-weight: var(--h1-bold);
     margin-top: 0.5vh;
     font-size: var(--font-h1);
-    background: linear-gradient(to right, rgb(129, 164, 221), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
     margin-bottom: 1vh;
 }
 
@@ -382,9 +368,7 @@ body::-webkit-scrollbar-thumb {
 .texto-container-2 h2 {
     font-weight: bold;
     text-align: start;
-    background: linear-gradient(to right, rgb(129, 164, 221), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	var(--color-p-two);
     padding: 0 2.1rem;
     margin-bottom: 0.5rem;
     width: 32rem;
@@ -392,7 +376,7 @@ body::-webkit-scrollbar-thumb {
 
 .texto-container-2 p {
     color: var(--color-p-one);
-    font-weight: 500;
+    font-weight: var(--p-bold);
     margin-bottom: 0;
     font-size: 16px;
     text-align: start;
@@ -524,9 +508,7 @@ body::-webkit-scrollbar-thumb {
 .header-container-3 h1 {
     font-weight: var(--h1-bold);
     font-size: var(--font-h1);
-    background: linear-gradient(to right, rgb(47, 92, 163), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
 }
 
 .header-container-3 h3 {
@@ -641,8 +623,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu-mobile {
+    background-color: var(--color-one);
+    position: fixed;
+    z-index: 998;
+    top: 0;
     text-align: center;
     display: none;
+    width: 100%;
     height: 100vh;
 }
 
@@ -677,9 +664,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: var(--h1-bold);
     font-size: var(--font-h1);
     margin-top: 0.5vh;
-    background: linear-gradient(to right, rgb(47, 92, 163), #257474);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
     margin-bottom: 0.5vh;
 }
 
@@ -878,9 +863,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: var(--h1-bold);
     font-size: var(--font-h1);
     margin-top: 0.5vh;
-    background: linear-gradient(to right, rgb(47, 92, 163), #257474);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
     margin-bottom: 0.5vh;
 }
 
@@ -1053,7 +1036,7 @@ body::-webkit-scrollbar-thumb {
 
 .container-6 {
     display: flex;
-    justify-content: space-between;
+    gap: 20vh;
     padding: var(--padding-section);
 }
 
@@ -1075,9 +1058,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: var(--h1-bold);
     font-size: var(--font-h1);
     margin-top: 0.5vh;
-    background: linear-gradient(to right, rgb(47, 92, 163), #257474);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
     margin-bottom: 0.5vh;
 }
 
@@ -1106,9 +1087,7 @@ body::-webkit-scrollbar-thumb {
     font-size: var(--font-h1);
     font-weight: var(--h1-bold);
     margin-top: 0.5vh;
-    background: linear-gradient(to right, rgb(47, 92, 163), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
 }
 
 .container-7 header p {
@@ -1167,9 +1146,7 @@ body::-webkit-scrollbar-thumb {
     font-size: var(--font-h1);
     font-weight: var(--h1-bold);
     margin-top: 5vh;
-    background: linear-gradient(to right, rgb(47, 92, 163), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
 }
 
 .text-container-mei p {
@@ -1192,9 +1169,7 @@ body::-webkit-scrollbar-thumb {
 .container-8 h1 {
     font-size: var(--font-h1);
     font-weight: var(--h1-bold);
-    background: linear-gradient(to right, rgb(129, 164, 221), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: 	#4682B4;
     margin-bottom: 0.5vh;
 }
 
@@ -1509,9 +1484,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container-9 h1 {
-    background: linear-gradient(to right, rgb(47, 92, 163), #aaffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: var(--h1-bold);
+    color: 	#4682B4;
     font-size: var(--font-h1);
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
