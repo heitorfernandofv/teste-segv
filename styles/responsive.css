@@ -45,9 +45,7 @@
 
     .service-item h3 {
         font-size: 0.9rem;
-        width: auto;
-        max-width: 40vh;
-        white-space: wrap;
+        width: 12rem;
     }
 
     .service-item img {
