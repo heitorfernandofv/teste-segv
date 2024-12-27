@@ -284,6 +284,8 @@
     }
 
     .phone-container {
+        background-size: cover;
+        background-position: center;
         margin: 0 auto;
         margin-top: 5vh;
     }
