@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="assets/segv-logo-transformed.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
@@ -16,7 +17,7 @@
 </head>
 <body>
 
-    <div id="top conteudo-principal"></div>
+    <div id="top"></div>
 
     <div class="cabecalho hidden-ler" id="cabecalho">
 
@@ -52,10 +53,11 @@
         </ul>
     </div>
 
-    <section class="container-1 conteudo-principal">
+    <section class="container-1">
         <div class="video-background">
-            <video src="assets/video-segv.mp4" autoplay muted loop></video>
-        </div>
+            <video src="assets/video-segv.mp4" autoplay muted playsinline loop></video>
+            <img src="assets/video-fallback.jpg" alt="Video Background" class="video-fallback">
+        </div>        
 
         <div id="conteudo-container-1">
             <div class="main-container-1">
@@ -69,7 +71,7 @@
         </div>
     </section>
 
-    <section class="container-8 conteudo-principal" id="container-8">
+    <section class="container-8" id="container-8">
 
         <div class="texto-container-8">
 
@@ -111,7 +113,7 @@
 
     </section>
 
-    <div class="conteudo-ad-container-1 conteudo-principal">
+    <div class="conteudo-ad-container-1">
         <div class="parallax" style="background-image: url(assets/download.png);">
             <div class="header-container-3">
                 <h1 class="hidden">Estrutura Completa</h1>
@@ -124,7 +126,7 @@
     </div>
     
 
-    <section class="container-2 conteudo-principal" id="container-2">
+    <section class="container-2" id="container-2">
 
         <div class="content">
             <header>
@@ -219,7 +221,7 @@
 
     </section>
 
-    <section class="container-3 conteudo-principal" style="background-image: url(assets/segv-externo.png);">
+    <section class="container-3" style="background-image: url(assets/segv-externo.png);">
         
         <div class="paralax-segv"></div>
         <div class="header-container-3" id="header-container-3">
@@ -231,7 +233,7 @@
 
     </section>
 
-    <section class="container-7 conteudo-principal" id="container-7">
+    <section class="container-7" id="container-7">
         <span class="intro-container">Nossas Parcerias</span>
 
         <header>
@@ -255,17 +257,17 @@
         </div>
     </section>
 
-    <section class="container-9 conteudo-principal">
+    <section class="container-9">
 
         <header>
             <span class="intro-container">Uma parceria de sucesso</span>
             <h1>Parceiro Homologado</h1>
-            <p style="font-weight: 800;">A SegV é uma parceira oficial e homologada da Intelbras, líder nacional em tecnologia de segurança e monitoramento.</p><br>
+            <p style="font-weight: 700;">A SegV é uma parceira oficial e homologada da Intelbras, líder nacional em tecnologia de segurança e monitoramento.</p><br>
             <p>Oferecemos soluções completas e integradas para proteger sua empresa ou residência, com equipamentos de alta qualidade e suporte técnico especializado.<br><br>
                     Com a parceria Intelbras, garantimos tecnologias de ponta, como sistemas de monitoramento, alarmes e controle de acesso, projetados para oferecer máxima eficiência, segurança e facilidade de uso. Tudo isso com um serviço sob medida, confiável e acessível, para atender às suas necessidades específicas.</p>
         </header>
 
-        <div class="phone-container">
+        <div class="phone-container" id="phone-container">
             <video class="background-video">
                 <source src="assets/video-segv.mp4" type="video/mp4">
             </video>
@@ -291,7 +293,7 @@
         <div class="vetor-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#061733" fill-opacity="1" d="M0,96L120,133.3C240,171,480,245,720,234.7C960,224,1200,128,1320,80L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg></div>
     </div>
 
-    <div class="ultima-parte conteudo-principal">
+    <div class="ultima-parte ">
 
         <section class="container-6" id="container-6">
             <div class="conteudo-container-6">
@@ -370,7 +372,7 @@
                 </div>
         </section>
 
-        <section class="container-4 conteudo-principal" id="container-4">
+        <section class="container-4" id="container-4">
             <img src="assets/download.png" alt="" id="img-tec">
             <div class="conteudo-container-4">
                 <div class="texto-container-4">
@@ -490,7 +492,7 @@
 
     </div>
 
-    <footer class="rodape conteudo-principal">
+    <footer class="rodape">
         <img src="assets/segv-logo-transformed.png" alt="Logo da SegV" id="logo-footer">
 
         <div class="itens-footer">
@@ -531,7 +533,7 @@
 
     </footer>
 
-    <footer class="copy conteudo-principal">
+    <footer class="copy">
         <p>Copyright © 2024 - Segview. Desenvolvido por CrystalCode. </p>
     </footer>
 
@@ -539,4 +541,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
