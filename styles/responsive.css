@@ -313,5 +313,9 @@
     #btn-menu:hover {
         background: transparent;
     }
+
+    .conteudo-ad-container-1, .container-3 {
+        background-attachment: scroll;
+    }
     
 }
