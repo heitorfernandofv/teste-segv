@@ -313,9 +313,5 @@
     #btn-menu:hover {
         background: transparent;
     }
-
-    .parallax, .container-3 {
-        background-attachment: scroll;
-    }
     
 }
